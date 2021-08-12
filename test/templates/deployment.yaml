@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app.openshift.io/runtime: {{.Values.labels.icon}}
+        app.openshift.io/runtime: {{ .Values.labels.icon }}
         deployment: lbf-ds-api-service-gateway
     spec:
       containers:
