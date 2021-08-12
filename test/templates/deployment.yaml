@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "test.fullname" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.openshift.io/runtime: dotnet
+      deployment: lbf-ds-api-service-gateway
+  template:
+    metadata:
+      labels:
+        app.openshift.io/runtime: dotnet
+        deployment: lbf-ds-api-service-gateway
+    spec:
+      containers:
+      - name: container-test
+        image: {{ .Values.image }}
+        ports:
+          - containerPort: 8080
+            protocol: TCP
+        imagePullPolicy: IfNotPresent
+        

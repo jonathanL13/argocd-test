@@ -1,0 +1,1 @@
+image: image-registry.openshift-image-registry.svc:5000/ny-arkitektur-feature-env/lbf-ds-api-service-gateway@sha256:bd079829df8ee8e1a552fceb335c7f548fd274aedff47c07b62d970594a617bf
