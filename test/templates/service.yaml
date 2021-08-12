@@ -2,11 +2,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Chart.Name }}
-  labels:
-    app: lbf-ds-api-service-gateway
-    app.kubernetes.io/component: lbf-ds-api-service-gateway
-    app.kubernetes.io/instance: lbf-ds-api-service-gateway
-    app.openshift.io/runtime: dotnet
 spec:
   selector: 
     app.openshift.io/runtime: dotnet
